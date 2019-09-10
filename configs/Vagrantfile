@@ -11,7 +11,7 @@ Vagrant.configure("2") do |config|
 
 	master.vm.provider :virtualbox do |v|
       v.customize ["modifyvm", :id, "--memory", 512]
-      v.customize ["modifyvm", :id, "--name", "vm1"]
+      v.customize ["modifyvm", :id, "--name", "vm1.1"]
 	  v.customize ["modifyvm", :id, "--cpus", 1]
 
 
@@ -30,7 +30,7 @@ Vagrant.configure("2") do |config|
 
     slave.vm.provider :virtualbox do |v|
       v.customize ["modifyvm", :id, "--memory", 2048]
-      v.customize ["modifyvm", :id, "--name", "vm2"]
+      v.customize ["modifyvm", :id, "--name", "vm2.1"]
 	  v.customize ["modifyvm", :id, "--cpus", 1]
     end
   end
@@ -47,7 +47,7 @@ Vagrant.configure("2") do |config|
 
     slave.vm.provider :virtualbox do |v|
       v.customize ["modifyvm", :id, "--memory", 2048]
-      v.customize ["modifyvm", :id, "--name", "vm3"]
+      v.customize ["modifyvm", :id, "--name", "vm3.1"]
 	  v.customize ["modifyvm", :id, "--cpus", 1]
     end
   end
