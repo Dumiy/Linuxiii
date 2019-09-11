@@ -10,10 +10,8 @@ virtualenv ansible
 source  ansible/bin/activate
 pip install ansible
 mkdir /home/vagrant/ansible/configs
-
-
-
+touch /home/vagrant/ansible/configs/inventory
 echo "[servers]
 192.168.56.101
 192.168.56.102
-192.168.56.103" > /ansible/configs/asd
+192.168.56.103" > /home/vagrant/ansible/configs/inventory

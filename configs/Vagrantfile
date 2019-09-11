@@ -4,7 +4,7 @@ Vagrant.configure("2") do |config|
     master.vm.hostname = 'ansible'
     master.vm.network :private_network, ip: "192.168.56.101"
 #	master.vm.network :forwarded_port, guest: 8080, host: 8080
-	master.vm.synced_folder "C:/Users/cpreda/OneDrive - ENDAVA/Desktop/Cursuri/PROIECT/configs/keys", "/shared_folder_JAT", type: "virtualbox"
+	master.vm.synced_folder "keys", "/shared_folder_JAT", type: "virtualbox"
 	master.vm.provision "shell", path: "ANSIBLE_VM1.sh"
 	master.vm.provision "shell", path: "SSH_STUFF.sh"
 
@@ -24,8 +24,8 @@ Vagrant.configure("2") do |config|
 
     slave.vm.network :private_network, ip: "192.168.56.102"
 #	slave.vm.network :forwarded_port, guest: 8888, host: 8888
-  slave.vm.synced_folder "C:/Users/cpreda/OneDrive - ENDAVA/Desktop/Cursuri/PROIECT/configs/keys", "/shared_folder_JAT", type: "virtualbox"
-	slave.vm.provision "file", source: "C:/Users/cpreda/OneDrive - ENDAVA/Desktop/Cursuri/PROIECT/configs/keys", destination: "~/.ssh"
+  slave.vm.synced_folder "keys", "/shared_folder_JAT", type: "virtualbox"
+	slave.vm.provision "file", source: "keys", destination: "~/.ssh"
 	slave.vm.provision "shell", path: "SSH_STUFF.sh"
 
     slave.vm.provider :virtualbox do |v|
@@ -41,8 +41,8 @@ Vagrant.configure("2") do |config|
 
     slave.vm.network :private_network, ip: "192.168.56.103"
 #	slave.vm.network :forwarded_port, guest: 8888, host: 8888
-  slave.vm.synced_folder "C:/Users/cpreda/OneDrive - ENDAVA/Desktop/Cursuri/PROIECT/configs/keys", "/shared_folder_JAT", type: "virtualbox"
-	slave.vm.provision "file", source: "C:/Users/cpreda/OneDrive - ENDAVA/Desktop/Cursuri/PROIECT/configs/keys", destination: "~/.ssh"
+  slave.vm.synced_folder "keys", "/shared_folder_JAT", type: "virtualbox"
+	slave.vm.provision "file", source: "keys", destination: "~/.ssh"
 	slave.vm.provision "shell", path: "SSH_STUFF.sh"
 
     slave.vm.provider :virtualbox do |v|
