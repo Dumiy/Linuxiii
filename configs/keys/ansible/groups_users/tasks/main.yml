@@ -1,2 +1,14 @@
 ---
-# tasks file for groups_users
+- hosts: 192.168.56.103
+  become: true
+  tasks:
+    - name: add docker group
+      group:
+        name: docker
+        state: present
+
+    - name: add vagrant user to group
+      user:
+        name: vagrant
+        group: docker
+        append: yes
