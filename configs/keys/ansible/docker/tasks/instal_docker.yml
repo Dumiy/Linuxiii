@@ -1,20 +1,34 @@
 ---
 - hosts: 192.168.56.103
+  become: true
   tasks:
-  - name: add stable repo
-    yum-repository:
-      name: docker repo
-      description: stable repository for docker
-      baseurl: https://download.docker.com/linux/centos/docker-ce.repo
+
   - name: install required packages
     yum:
       name:
         - yum-utils
         - device-mapper-persistent-data
         - lvm2
-        - docker-ce
+
+      state: present
+
+  - name: Add Docker GPG key.
+    rpm_key:
+      key: https://download.docker.com/linux/centos/gpg
+      state: present
+
+  - name: Add Docker repository.
+    get_url:
+      url: https://download.docker.com/linux/centos/docker-ce.repo
+      dest: '/etc/yum.repos.d/docker.repo'
+
+
+  - name: install docker
+    yum:
+      name:
         - docker-ce-cli
         - containerd.io
+        - docker-ce
       state: present
 
   - name: start and enable docker service
