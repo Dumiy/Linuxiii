@@ -1,4 +1,0 @@
----
-- hosts: 192.168.56.103
-  become: true
-  tasks:

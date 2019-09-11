@@ -1,15 +1,42 @@
 ---
-- hosts: 192.168.56.103
-  tasks:
-  - name: ensure everything is removed
-    yum:
-      name:
-        - docker
-        - docker-client
-        - docker-client-latest
-        - docker-common
-        - docker-latest
-        - docker-latest-logrotate
-        - docker-logrotate
-        - docker-engine
-      state: absent
+- name: ensure everything is removed
+  yum:
+    name:
+      - docker
+      - docker-client
+      - docker-client-latest
+      - docker-common
+      - docker-latest
+      - docker-latest-logrotate
+      - docker-logrotate
+      - docker-engine
+    state: absent
+
+- name: install required packages
+  yum:
+    name:
+      - yum-utils
+      - device-mapper-persistent-data
+      - lvm2
+    state: present
+- name: Add Docker GPG key.
+  rpm_key:
+    key: https://download.docker.com/linux/centos/gpg
+    state: present
+- name: Add Docker repository.
+  get_url:
+    url: https://download.docker.com/linux/centos/docker-ce.repo
+    dest: '/etc/yum.repos.d/docker.repo'
+
+- name: install docker
+  yum:
+    name:
+      - docker-ce-cli
+      - containerd.io
+      - docker-ce
+    state: present
+- name: start and enable docker service
+  service:
+    name: docker
+    state: started
+    enabled: yes

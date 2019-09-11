@@ -1,0 +1,9 @@
+---
+- name: Does stuff
+  serial: 1
+  hosts: vm3
+  become: true
+  roles:
+    - docker
+    - groups_users
+    - containers
