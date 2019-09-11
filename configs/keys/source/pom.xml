@@ -22,10 +22,10 @@
         <maven.compiler.target>1.6</maven.compiler.target>
     </properties>
     <scm>
-        <connection>scm:svn:http://localhost:8080/maven-public</connection>
-        <developerConnection>scm:svn:http://localhost:8080/repository/maven-snapshots/</developerConnection>
+        <connection>scm:svn:http://192.168.56.103:8081/maven-public</connection>
+        <developerConnection>scm:svn:http://192.168.56.103:8081/repository/maven-snapshots/</developerConnection>
         <tag>HEAD</tag>
-        <url>http://localhost:8080/maven-public</url>
+        <url>http://192.168.56.103:8081/maven-public</url>
     </scm>
     <dependencies>
 
@@ -193,18 +193,18 @@
     <repositories>
       <repository>
         <id>maven-group</id>
-        <url>http://localhost:8080/repository/maven-public/</url>
+        <url>http://192.168.56.103:8081/repository/maven-public/</url>
       </repository>
     </repositories>
 
     <distributionManagement>
      <snapshotRepository>
        <id>maven-snapshots</id>
-       <url>http://localhost:8080/repository/maven-snapshots/</url>
+       <url>http://192.168.56.103:8081/repository/maven-snapshots/</url>
      </snapshotRepository>
      <repository>
        <id>maven-releases</id>
-       <url>http://localhost:8080/repository/maven-releases/</url>
+       <url>http://192.168.56.103:8081/repository/maven-releases/</url>
      </repository>
     </distributionManagement>
    
