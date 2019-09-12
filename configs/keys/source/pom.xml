@@ -21,9 +21,11 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
-         <scm>
-                  <connection>scm:svn:http://192.168.56.103:8081/repository/maven-central/</connection>
-         </scm>
+        <scm>
+                   <connection>scm:svn:http://192.168.56.103:8081/repository/maven-releases/</connection>
+                  <developerConnection>scm:svn:http://192.168.56.103:8081/repository/maven-releases/</developerConnection>
+                  <url>http://192.168.56.103:8081/repository/maven-central/</url>
+          </scm>
     <dependencies>
     
         <dependency>
@@ -231,11 +233,6 @@
          <tagNameFormat>v@{project.version}</tagNameFormat>
          <autoVersionSubmodules>true</autoVersionSubmodules>
          <releaseProfiles>releases</releaseProfiles>
-          <scm>
-                   <connection>scm:svn:http://192.168.56.103:8081/repository/maven-releases/</connection>
-                  <developerConnection>scm:svn:http://192.168.56.103:8081/repository/maven-releases/</developerConnection>
-                  <url>http://192.168.56.103:8081/repository/maven-central/</url>
-          </scm>
          </configuration>
 </plugin>
     </plugins>
