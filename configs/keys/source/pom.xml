@@ -21,6 +21,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
+      
     <dependencies>
     
         <dependency>
@@ -200,7 +201,7 @@
        <url>http://192.168.56.103:8081/repository/maven-releases/</url>
      </repository>
     </distributionManagement>
-    <scm>
+     <scm>
            <connection>scm:svn:http://192.168.56.103:8081/repository/maven-releases/</connection>
            <developerConnection>scm:svn:http://192.168.56.103:8081/repository/maven-releases/</developerConnection>
            <url>http://192.168.56.103:8081/repository/maven-central/</url>
