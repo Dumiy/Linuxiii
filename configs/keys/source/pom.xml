@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>am.endava.com</groupId>
     <artifactId>linuxii</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.1.SNAPSHOT</version>
     <packaging>war</packaging>
     <name>Linuxiii Web</name>
     <url>http://192.168.56.103:8081/repository/maven-releases/</url>
@@ -21,9 +19,9 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
-      
+
     <dependencies>
-    
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -202,10 +200,10 @@
      </repository>
     </distributionManagement>
            <scm>
-         <connection>scm:git:https://github.com/Dumiy/Linuxiii.git</connection>
-   <url>https://github.com/Dumiy/Linuxiii</url>
-   <developerConnection>scm:git:https://github.com/Dumiy/Linuxiii.git</developerConnection>
-         </scm>
+         <connection>scm:http://192.168.56.103:8081/repository/maven-releases/</connection>
+   <url>http://192.168.56.103:8081/repository/maven-releases/</url>
+   <developerConnection>http://192.168.56.103:8081/repository/maven-releases/</developerConnection>
+  </scm>
     <build>
      <plugins>
       <plugin>
