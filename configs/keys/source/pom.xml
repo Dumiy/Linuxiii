@@ -23,7 +23,7 @@
     </properties>
     <scm>
         <connection>scm:svn:http://192.168.56.103:8081/maven-public</connection>
-        <developerConnection>scm:svn:http://192.168.56.103:8081/repository/maven-snapshots/</developerConnection>
+        <developerConnection>scm:svn:http://192.168.56.103:8081/repository/maven-releases</developerConnection>
         <tag>HEAD</tag>
         <url>http://192.168.56.103:8081/maven-public</url>
     </scm>
