@@ -184,7 +184,7 @@
   <distributionManagement>
    <repository>
       <id>nexus-releases</id>
-      <url>http://192.168.56.103:8081/nexus/content/repositories/releases</url>
+      <url>http://192.168.56.103:8081/repository/maven-releases/</url>
    </repository>
 </distributionManagement>
    <scm>
@@ -222,7 +222,7 @@
                </executions>
                <configuration>
                   <serverId>nexus-releases</serverId>
-                  <nexusUrl>http://192.168.56.103:8081/nexus/</nexusUrl>
+                  <nexusUrl>http://192.168.56.103:8081/repository/maven-releases/</nexusUrl>
                   <skipStaging>true</skipStaging>
                </configuration>
             </plugin>
