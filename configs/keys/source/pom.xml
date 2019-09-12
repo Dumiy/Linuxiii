@@ -6,7 +6,7 @@
 
     <groupId>am.endava.com</groupId>
     <artifactId>linuxii</artifactId>
-    <version>1.0</version>
+    <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>Linuxiii Web</name>
     <url>http://maven.apache.org</url>
