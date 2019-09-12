@@ -184,7 +184,6 @@
         </dependency>
 
     </dependencies>
-         <distributionManagement>
     <repositories>
       <repository>
         <id>maven-group</id>
@@ -203,10 +202,19 @@
       <url>http://192.168.56.103:8081/nexus/maven-releases</url>
    </repository>
     </repositories>
-                  </distributionManagement>
      <scm>
              <developerConnection>http://192.168.56.103:8081/repository/maven-releases/</developerConnection>
      </scm>
+         <distributionManagement>
+     <snapshotRepository>
+       <id>maven-snapshots</id>
+       <url>http://192.168.56.103:8081/repository/maven-snapshots/</url>
+     </snapshotRepository>
+     <repository>
+       <id>maven-releases</id>
+       <url>http://192.168.56.103:8081/repository/maven-releases/</url>
+     </repository>
+    </distributionManagement>
     <build>
      <plugins>
     <plugin>
