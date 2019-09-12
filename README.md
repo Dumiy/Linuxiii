@@ -35,7 +35,7 @@ cd /home/vagrant/ansible
 source bin/activate
 ```
 
-After the environment is activated, you can go to the shared folder that was automatically created with Vagrant, and build with Ansible on VM3. This will run the roles you have on machine 3.
+After the environment is activated, you can copy the roles from the shared folder, made by Vagrant, and build with Ansible. This will run everything on machine 3.
 
 ```bash
 cp -r /shared_folder_JAT/ansible /home/vagrant/ansible/
