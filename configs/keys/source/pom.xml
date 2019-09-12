@@ -233,6 +233,9 @@
          <tagNameFormat>v@{project.version}</tagNameFormat>
          <autoVersionSubmodules>true</autoVersionSubmodules>
          <releaseProfiles>releases</releaseProfiles>
+                  <tagBase>
+                        http://192.168.56.103:8081/repository/maven-releases/   
+                  </tagBase>
          </configuration>
 </plugin>
     </plugins>
