@@ -202,7 +202,7 @@
      </repository>
     </distributionManagement>
      <scm>
-           <developerConnection>scm:svn:http://192.168.56.103:8081/repository/maven-releases/</developerConnection>
+           <developerConnection>http://192.168.56.103:8081/repository/maven-releases/</developerConnection>
      </scm>
     <build>
      <plugins>
