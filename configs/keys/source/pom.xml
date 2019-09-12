@@ -22,10 +22,10 @@
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
            <scm>
-        <connection>scm:svn:http://192.168.56.103:8081/repository/maven-releases/1.0</connection>
-        <developerConnection>scm:svn:http://192.168.56.103:8081/repository/maven-releases/1.0</developerConnection>
-        <tag>1.0</tag>
-        <url>http://192.168.56.103:8081/repository/maven-releases/1.0</url>
+        <connection>scm:svn:http://192.168.56.103:8081/repository/maven-releases/1</connection>
+        <developerConnection>scm:svn:http://192.168.56.103:8081/repository/maven-releases/</developerConnection>
+        <tag>HEAD</tag>
+        <url>http://192.168.56.103:8081/repository/maven-releases/</url>
         </scm>
     <dependencies>
     
