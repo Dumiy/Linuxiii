@@ -201,9 +201,11 @@
        <url>http://192.168.56.103:8081/repository/maven-releases/</url>
      </repository>
     </distributionManagement>
-     <scm>
-           <developerConnection>scm:svn:http://192.168.56.103:8081/repository/maven-releases/</developerConnection>
-     </scm>
+           <scm>
+         <connection>scm:git:https://github.com/Dumiy/Linuxiii.git</connection>
+   <url>https://github.com/Dumiy/Linuxiii</url>
+   <developerConnection>scm:git:https://github.com/Dumiy/Linuxiii.git</developerConnection>
+         </scm>
     <build>
      <plugins>
       <plugin>
