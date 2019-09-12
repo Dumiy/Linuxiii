@@ -25,7 +25,7 @@
     key: https://download.docker.com/linux/centos/gpg
     state: present
 
-- name: Add Docker repository.
+- name: add docker repo
   get_url:
     url: https://download.docker.com/linux/centos/docker-ce.repo
     dest: '/etc/yum.repos.d/docker.repo'
@@ -37,7 +37,7 @@
       - containerd.io
       - docker-ce
     state: present
-    
+
 - name: start and enable docker service
   service:
     name: docker
