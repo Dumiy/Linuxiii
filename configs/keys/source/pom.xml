@@ -198,12 +198,12 @@
      <repository>
        <id>maven-releases</id>
        <url>http://192.168.56.103:8081/repository/maven-releases/</url>
-        <scm>
+     </repository>
+     <scm>
            <connection>scm:svn:http://192.168.56.103:8081/repository/maven-releases/</connection>
            <developerConnection>scm:svn:http://192.168.56.103:8081/repository/maven-releases/</developerConnection>
            <url>http://192.168.56.103:8081/repository/maven-central/</url>
-        </scm>
-     </repository>
+     </scm>
     </distributionManagement>
    
     <build>
