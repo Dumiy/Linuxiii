@@ -1,0 +1,31 @@
+---
+- hosts: vm2
+
+  vars:
+    firewall_allowed_tcp_ports:
+      - "22"
+      - "8080"
+    jenkins_plugins:
+      - ansicolor
+
+  roles:
+    - geerlingguy.firewall
+    - geerlingguy.ansible
+    - geerlingguy.java
+    - geerlingguy.jenkins
+    - avinash6784.maven
+  ignore_errors: yes
+  become: yes
+  tasks:
+    - name : Adding plugin matrix
+      shell: "java -jar /opt/jenkins-cli.jar -auth admin:admin -s http://192.168.56.102:8080/ install-plugin matrix-auth"
+    - name : Installing git
+      yum:
+        name: git
+        state: present
+    - name: Adding m2 home
+      shell: " export M2_HOME=/opt/apache-maven-3.3.9 "
+
+    - name: Adding m2
+      shell: "export PATH=$PATH:$M2_HOME/bin"
+
