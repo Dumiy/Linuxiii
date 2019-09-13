@@ -21,11 +21,6 @@ http://maven.apache.org/SETTINGS/1.1.0 ">
         </mirror>
     </mirrors>
     <servers>
-      <server>
-         <id>git</id>  
-         <username>Dumiy</username>  
-         <password>13289600Steaua*</password>  
-      </server>   
         <server>
             <id>maven-group</id>
             <username>admin</username>
