@@ -30,7 +30,9 @@
   <builders>
     <hudson.tasks.Shell>
       <command>git init
-#git remote set-url origin https://github.com/Dumiy/Linuxiii
+git remote set-url origin https://github.com/Dumiy/Linuxiii
+git config --global user.email "dumitrascu.claudiu.cristian@gmail.com"
+git config --global user.name "Dumiy"
 git pull origin master
 git checkout master
 cd configs/keys/
