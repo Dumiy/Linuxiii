@@ -1,0 +1,17 @@
+---
+- name: install maven
+  yum:
+    name: maven
+    state: latest
+
+- name: install github
+  yum:
+    name: git
+    state: latest
+
+- name: Adding config file
+  copy:
+    src: /home/vagrant/jenkins/Linuxiii/configs/keys/ansible/jenki/jenkins.xml
+    dest: /home/vagrant/jenkins.xml
+- name : Creating job
+  shell: "java -jar /opt/jenkins-cli.jar -auth admin:admin -s http://192.168.56.102:8080/ create-job pipe < /home/vagrant/jenkins.xml"

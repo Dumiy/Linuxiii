@@ -1,0 +1,14 @@
+---
+- hosts: vm3
+  become: true
+  roles:
+    - docker
+    - groups_users
+    - containers
+
+- hosts: vm2
+  become: true
+  roles:
+    - geerlingguy.java
+    - geerlingguy.jenkins
+    - maven
