@@ -1,7 +1,4 @@
 ---
-<<<<<<< HEAD
-# tasks file for containers
-=======
 - name: le EPEL
   yum:
     name: epel-release
@@ -59,4 +56,3 @@
   until: result.status == 200
   retries: 60
   delay: 3
->>>>>>> 582df66cbcfe7024eba26af363b0269fee137984
