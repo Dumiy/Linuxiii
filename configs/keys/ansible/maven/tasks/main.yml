@@ -4,7 +4,7 @@
     name: maven
     state: latest
 
-- name: install github
+- name: install git
   yum:
     name: git
     state: latest
