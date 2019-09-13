@@ -1,2 +1,11 @@
 ---
-# tasks file for groups_users
+- name: add docker group
+  group:
+    name: docker
+    state: present
+
+- name: add vagrant user to group
+  user:
+    name: vagrant
+    group: docker
+    append: yes

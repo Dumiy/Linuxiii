@@ -15,3 +15,10 @@ echo "[servers]
 192.168.56.101
 192.168.56.102
 192.168.56.103" > /home/vagrant/ansible/configs/inventory
+mkdir /home/vagrant/jenkins
+sudo yum install git -y
+cd /home/vagrant/jenkins
+git remote add  https://github.com/Dumiy/Linuxiii
+git pull origin master
+git checkout ansible
+cd configs/keys/ansible/jenkins
