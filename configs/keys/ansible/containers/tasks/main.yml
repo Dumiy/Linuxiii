@@ -21,7 +21,7 @@
 
 - name: pull an image
   docker_image:
-    name: sonatype/nexus3
+    name: cpreda/proiect_repo:latest
 
 - name: wait for docker_registry to come up
   uri:
@@ -34,7 +34,7 @@
 
 - name: Tag and push to local registry
   docker_image:
-    name: sonatype/nexus3
+    name: cpreda/proiect_repo:latest
     repository: 'localhost:5000/nexus3'
     push: yes
     source: local
@@ -45,7 +45,7 @@
   register: resultn3
 
 - name: start nexus3
-  command: docker run -d -p 8081:8081 --restart=always --name nexus sonatype/nexus3
+  command: docker run -d -p 8081:8081 --restart=always --name nexus cpreda/proiect_repo:latest
   when: resultn3.exists == False
 
 - name: wait for nexus to come up
