@@ -1,1 +1,7 @@
 /configs/.vagrant/*
+*.class
+*.idea
+*.iml
+/out/
+/target/
+.idea/
