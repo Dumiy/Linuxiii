@@ -30,9 +30,7 @@ ANSIBLE_VM1.sh installs and configs Ansible on VM1, in a virtual environment.
 After the machines are up and running, you can connect to VM1, go to ansible environment directory and activate it. 
 
 ```bash
-cd /home/vagrant/ansible
-
-source bin/activate
+source /home/vagrant/ansible/bin/activate
 ```
 
 After the environment is activated, you can copy the roles from the shared folder, made by Vagrant, and build with Ansible. This will run everything on machine 3.
