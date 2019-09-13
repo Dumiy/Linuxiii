@@ -1,20 +1,4 @@
 ---
-<<<<<<< HEAD
-- hosts: 192.168.56.103
-  tasks:
-  - name: ensure everything is removed
-    yum:
-      name:
-        - docker
-        - docker-client
-        - docker-client-latest
-        - docker-common
-        - docker-latest
-        - docker-latest-logrotate
-        - docker-logrotate
-        - docker-engine
-      state: absent
-=======
 - name: ensure everything is removed
   yum:
     name:
@@ -59,4 +43,4 @@
     name: docker
     state: started
     enabled: yes
->>>>>>> 582df66cbcfe7024eba26af363b0269fee137984
+
