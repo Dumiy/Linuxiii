@@ -22,5 +22,3 @@ git remote add  https://github.com/Dumiy/Linuxiii
 git pull origin master
 git checkout ansible
 cd configs/keys/ansible/jenkins
-ansible-galaxy install -r requirements.yml
-ansible-galaxy install avinash6784.maven
